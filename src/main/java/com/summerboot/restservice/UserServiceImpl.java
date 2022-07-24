@@ -1,4 +1,5 @@
 package com.summerboot.restservice;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,11 +12,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean addUser(User user) {
-        boolean flag=false;
-        try{
+        boolean flag = false;
+        try {
             userDao.addUser(user);
-            flag=true;
-        }catch(Exception e){
+            flag = true;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return flag;
@@ -23,11 +24,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean updateUser(User user) {
-        boolean flag=false;
-        try{
+        boolean flag = false;
+        try {
             userDao.updateUser(user);
-            flag=true;
-        }catch(Exception e){
+            flag = true;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return flag;
@@ -35,11 +36,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean deleteUser(String id) {
-        boolean flag=false;
-        try{
+        boolean flag = false;
+        try {
             userDao.deleteUser(id);
-            flag=true;
-        }catch(Exception e){
+            flag = true;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return flag;

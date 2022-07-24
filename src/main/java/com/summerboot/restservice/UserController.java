@@ -1,8 +1,10 @@
 package com.summerboot.restservice;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 @RestController
 @RequestMapping(value = "/ias")
 public class UserController {
@@ -26,7 +28,6 @@ public class UserController {
         System.out.println("删除数据：");
         return userService.deleteUser(String.valueOf(Id));
     }
-
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public User findByUserName(@RequestParam(value = "userName", required = true) String userName) {

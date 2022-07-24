@@ -2,6 +2,7 @@ package com.summerboot.restservice;
 
 import org.apache.ibatis.annotations.*;
 import org.springframework.data.repository.query.Param;
+
 import java.util.List;
 
 @Mapper
@@ -9,31 +10,30 @@ public interface UserDao {
     /**
      * 新增数据
      */
-    @Insert("insert into user(id,email,password,username) values (#{id},#{email},#{password},#{username})")
+    @Insert("insert into t_user(id,email,password,username) values (#{id},#{email},#{password},#{username})")
     void addUser(User user);
 
     /**
      * 修改数据
      */
-    @Update("update user set username=#{username},password=#{password} where id=#{id}")
+    @Update("update t_user set username=#{username},password=#{password} where id=#{id}")
     void updateUser(User user);
 
     /**
      * 删除数据
      */
-    @Delete("delete from user where id=#{id}")
+    @Delete("delete from t_user where id=#{id}")
     void deleteUser(String id);
 
     /**
      * 根据查询数据
-     *
      */
-    @Select("select id,email,password,username from user where username=#{userName}")
+    @Select("select id,email,password,username from t_user where username=#{userName}")
     User findByName(@Param("userName") String userName);
 
     /**
      * 查询所有数据
      */
-    @Select("select id,email,password,username FROM user")
+    @Select("select id,email,password,username FROM t_user")
     List<User> findAll();
 }

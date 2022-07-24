@@ -15,6 +15,7 @@ public class GlobalExceptionHandler {
         mmp.addAttribute("ex", e);
         return new ModelAndView("error", mmp);
     }
+
     @ExceptionHandler(Exception.class)
     public ModelAndView fix1(Exception e) {
         System.out.println("全局的异常处理器Exception");
