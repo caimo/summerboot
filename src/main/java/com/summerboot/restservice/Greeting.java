@@ -1,4 +1,4 @@
-package com.example.restservice;
+package com.summerboot.restservice;
 
 public class Greeting {
 
