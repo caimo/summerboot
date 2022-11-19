@@ -35,12 +35,6 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
-		<!-- Spring Boot Mybatis 依赖 -->
-		<dependency>
-			<groupId>org.mybatis.spring.boot</groupId>
-			<artifactId>mybatis-spring-boot-starter</artifactId>
-			<version>1.2.0</version>
-		</dependency>
 		<!-- MySQL 连接驱动依赖 -->
 		<dependency>
 			<groupId>mysql</groupId>

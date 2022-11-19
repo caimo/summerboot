@@ -1,5 +1,6 @@
-package com.summerboot.restservice;
+package com.summerboot.restservice.controller;
 
+import com.summerboot.restservice.dto.Greeting;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.summerboot.restservice;
+package com.summerboot.restservice.dto;
 
 public class Greeting {
 

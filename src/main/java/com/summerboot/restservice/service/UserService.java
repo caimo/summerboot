@@ -1,6 +1,9 @@
-package com.summerboot.restservice;
+package com.summerboot.restservice.service;
+
+import com.summerboot.restservice.model.User;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface UserService {
     /**
@@ -33,7 +36,14 @@ public interface UserService {
      *
      * @param userName
      */
-    User findUserByName(String userName);
+    Optional<User> findUserByName(String userName);
+
+    /**
+     * 根据名字查询用户信息
+     *
+     * @param id
+     */
+    Optional<User> findUserById(String id);
 
 
     /**
