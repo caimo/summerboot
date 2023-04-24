@@ -27,6 +27,8 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.nio.charset.StandardCharsets;
+
 @SpringBootTest
 @AutoConfigureMockMvc
 public class GreetingControllerTests {
@@ -48,5 +50,6 @@ public class GreetingControllerTests {
 				.andDo(print()).andExpect(status().isOk())
 				.andExpect(jsonPath("$.content").value("Hello, Spring Community!"));
 	}
+
 
 }
